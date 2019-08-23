@@ -366,6 +366,9 @@ _where pointAsString is a method defined_
 	- Input and expected output files (compare using command '`FC file1 file2`')
 	- To detect unintended changes
 
+-----
+
+# CS2103 Notes
 # Week 2
 
 ## Pros and Cons
@@ -636,3 +639,88 @@ _where pointAsString is a method defined_
 | **Plugins** | Extend the functionality of Gradle | `java` plugin adds support for `Java` projects |
 | **Tasks** | Reusable blocks of logic (can be composed of other tasks or be dependent on another task) | Task `clean` simply deletes the project build directory |
 | **Properties** | Changes the behaviour of tasks | `mainClassName` of the `application` plugin is a compulsory property which tells Gradle which class is the entrypoint to your application |
+
+# Week 2 Lecture (23/8)
+
+* Don't be complacent.
+* Theory (from CS2103) + Experience
+    - Making connections between the 2
+* Multi-cursor
+
+## Intellij
+
+| Command | Description |
+| --- | --- |
+| `CTRL-Q` | See Quick Documentation |
+| `CTRL-Click` | See source code of method |
+| `CTRL-D` | Duplicates selected block or current line (if no block selected) |
+| `Shift-Tab`| Unindent line |
+| `CTRL-Shift-A` | Help/Search |
+
+## Good Code
+
+* Code quality is important
+* Readability
+* Practices for better code
+    1. Standardise
+        - Should look like a single person typed it, no matter how many contributors
+        - Capitalisation
+        - Indentation
+        - etc.
+    2. ...
+
+## Finding bugs
+- QA Tester
+    - Can only happen at the end
+    - More costly, more to change and fix
+    - Mistakes would be publicised and recorded, uploaded on the bug tracker for you to fix eventually
+- Developers
+    - Find sooner, the better
+
+## Automated Testing
+* Testing frameworks
+    - JUnit
+    - Need both drivers and stubs
+* JUnit
+    - Annotate with `@` to show that it is a test
+    - Use `assetEquals` in method used for testing
+        - e.g. `testExecuteUserCommand`
+        - Each line starting with this is another test
+    - 3rd party library, needs to be imported
+    - Run with the green triangle symbol
+
+## Branches
+- Useful when you want to try a new approach
+    - You don't have to delete the current working code
+- `HEAD` indicates which version of files you are currently checking out
+- Fast-forward merge
+    1. When you have a branch, made some commits there
+    2. No changes in `Master`
+    3. Just directly merge (kinda like shifting commits over to `Master`branch)
+- Good practice to merge without fast-forward
+    - Just to log and see the merge
+    - Use flag (`git merge --no-ff`)
+- When branch off too early, when new commits made to `Master` is wanted in the branch as well
+    - Merge `Master`to branch
+    - Or user `rebase`
+        - As if branch was done later
+        - A bit dangerous, be careful, rewriting history
+        - Need to force-push to remote
+        - A mess if other people have copied the old history
+        - Generally, not rewrite history in collaboration projects
+- Create a new branch from `Master`
+    - Branches can have branches
+
+## Pull Request
+* CS2103
+    - [Name] Duke Increments
+
+## iP
+* Make it your own
+    - Give bot any name/personality
+    - Don't change repo name
+* Opportunity to level-up and/or showcase skills
+* Bots will only do superficial process check
+    - Subject to human reviewers later
+* Assume future to be unknown
+    - Implement each increment to the best you can but without considering future increments
