@@ -10,5 +10,6 @@ Work.java
 
 javafx-sdk-11.0.2/
 
-
+# Ignore tP fork
+main/
 
