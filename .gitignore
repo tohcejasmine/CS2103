@@ -13,3 +13,5 @@ javafx-sdk-11.0.2/
 # Ignore tP fork
 main/
 
+# Ignore tP related files
+cs2103\ tP
