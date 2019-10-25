@@ -15,3 +15,6 @@ main/
 
 # Ignore tP related files
 cs2103\ tP
+
+# Ignore graphviz for PlantUML
+graphviz-2.38/
